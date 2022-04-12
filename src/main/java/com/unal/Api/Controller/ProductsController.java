@@ -31,4 +31,9 @@ public class ProductsController {
         return productService.add(product);
     }
 
+    @GetMapping("/getByProductName")
+    public  DataResult<Product> getByProductName(@RequestParam String productName) {
+        return productService.getByProductName(productName);
+    }
+
 }

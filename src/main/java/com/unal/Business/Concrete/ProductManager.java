@@ -25,7 +25,7 @@ public class ProductManager implements ProductService {
     @Override
     public DataResult<List<Product>> getAll() {
         return new SuccessDataResult<List<Product>>
-                (productDal.findAll(),"Data listelendi");
+                (productDal.findAll(),"tüm data listelendi");
     }
 
     @Override
@@ -41,23 +41,23 @@ public class ProductManager implements ProductService {
     }
 
     @Override
-    public DataResult<Product> getByProductNameAndCategoryId(String productName, int categoryId) {
+    public DataResult<Product> getByProductNameAndCategory(String productName, int categoryId) {
         return new SuccessDataResult<Product>
-                (productDal.getByProductNameAndCategoryId(productName,categoryId)
+                (productDal.getByProductNameAndCategory(productName,categoryId)
                         ,"Data getirildi");
     }
 
     @Override
-    public DataResult<List<Product>> getByProductNameOrCategoryId(String productName, int categoryId) {
+    public DataResult<List<Product>> getByProductNameOrCategory(String productName, int categoryId) {
         return new SuccessDataResult<List<Product>>
-                (productDal.getByProductNameOrCategoryId(productName,categoryId)
+                (productDal.getByProductNameOrCategory(productName,categoryId)
                         ,"Data getirildi");
     }
 
     @Override
-    public DataResult<List<Product>> getByCategoryIdIn(List<Integer> categories) {
+    public DataResult<List<Product>> getByCategoryIn(List<Integer> categories) {
         return new SuccessDataResult<List<Product>>
-                (productDal.getByCategoryIdIn(categories)
+                (productDal.getByCategoryIn(categories)
                         ,"Data getirildi");
     }
 

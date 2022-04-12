@@ -10,16 +10,16 @@ import java.util.List;
 public interface ProductService {
 
     //List<Product> getAll(); data resulta T olarak list<Product verdik>
-    DataResult< List<Product>> getAll();
+    DataResult<List<Product>> getAll();
     Result add(Product product);
 
     DataResult<Product> getByProductName(String productName);
 
-    DataResult<Product>  getByProductNameAndCategoryId(String productName, int categoryId);
+    DataResult<Product>  getByProductNameAndCategory(String productName, int categoryId);
 
-    DataResult<List<Product>> getByProductNameOrCategoryId(String productName, int categoryId);
+    DataResult<List<Product>> getByProductNameOrCategory(String productName, int categoryId);
 
-    DataResult<List<Product>> getByCategoryIdIn(List<Integer> categories);
+    DataResult<List<Product>> getByCategoryIn(List<Integer> categories);
 
     DataResult<List<Product>> getByProductNameContains(String productName);
 
