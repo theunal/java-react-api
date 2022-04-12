@@ -36,4 +36,14 @@ public class ProductsController {
         return productService.getByProductName(productName);
     }
 
+    @GetMapping("/getByProductNameAndCategoryId")
+    public DataResult<Product> getByProductNameAndCategoryId
+            (@RequestParam(name = "productName") String productName,
+             @RequestParam(name = "categoryId") int categoryId) {
+
+        return productService.getByProductNameAndCategoryId(productName,categoryId);
+
+    }
+
+
 }
